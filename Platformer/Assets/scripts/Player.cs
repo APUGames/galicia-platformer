@@ -5,9 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    [Header("Movement Settings")]
     [SerializeField] private float runSpeed = 5.0f;
     [SerializeField] private float jumpSpeed = 5.0f;
     [SerializeField] private float climbSpeed = 5.0f;
+
+    [Header("Death Settings")]
+    [SerializeField] private Vector2 deathSeq = new Vector2(25f, 25f);
+
+    [Header("SoundSettings")]
+    [SerializeField] private AudioClip playerJumpSound;
+
+    private bool isAlive = true;
 
     private float gravityScaleAtStart;
 
@@ -30,10 +39,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isAlive)
+        {
+            return;
+        }
+
         Run();
         FlipSprite();
         Jump();
         Climb();
+        Die();
     }
 
     private void Run()
@@ -74,6 +89,7 @@ public class Player : MonoBehaviour
 
         if(Input.GetButtonDown("Jump"))
         {
+            AudioSource.PlayClipAtPoint(playerJumpSound, Camera.main.transform.position);
             // get new y velocity based on a controller variable
             Vector2 jumpVelocity = new Vector2(0.0f, jumpSpeed);
             playerCharacter.velocity += jumpVelocity;
@@ -101,4 +117,13 @@ public class Player : MonoBehaviour
 
     }
 
+    private void Die()
+    {
+        if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+        {
+            isAlive = false;
+            playerAnimator.SetTrigger("die"); //not yet created
+            GetComponent<Rigidbody2D>().velocity = deathSeq;
+        }
+    }
 }

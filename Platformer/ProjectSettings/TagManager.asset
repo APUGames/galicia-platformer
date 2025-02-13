@@ -15,9 +15,9 @@ TagManager:
   - Player
   - Climbing
   - Background
-  - 
-  - 
-  - 
+  - Enemy
+  - Hazards
+  - Pickups
   - 
   - 
   - 
@@ -44,12 +44,24 @@ TagManager:
   - name: Background
     uniqueID: 2903957537
     locked: 0
+  - name: BGDecor
+    uniqueID: 837083157
+    locked: 0
   - name: Foreground
     uniqueID: 1244124683
     locked: 0
   - name: Climbing
     uniqueID: 1932594187
     locked: 0
+  - name: Pickups
+    uniqueID: 622223565
+    locked: 0
   - name: Player
     uniqueID: 631153491
+    locked: 0
+  - name: Enemy
+    uniqueID: 1724421905
+    locked: 0
+  - name: Hazards
+    uniqueID: 2601780993
     locked: 0
