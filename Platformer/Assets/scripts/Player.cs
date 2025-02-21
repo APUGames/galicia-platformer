@@ -124,6 +124,8 @@ public class Player : MonoBehaviour
             isAlive = false;
             playerAnimator.SetTrigger("die"); //not yet created
             GetComponent<Rigidbody2D>().velocity = deathSeq;
+
+            FindAnyObjectByType<GameSession>().ProcessPlayerDeath();
         }
     }
 }
