@@ -54918,8 +54918,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 90.301926, y: 42.59599}
-      - {x: -15.477295, y: 41.259098}
-      - {x: -14.592178, y: -7.608198}
+      - {x: 2.8368835, y: 41.81831}
+      - {x: 2.9420261, y: -7.8544674}
       - {x: 90.80468, y: -7.4833527}
   m_UseDelaunayMesh: 0
 --- !u!1001 &510964331
@@ -56646,13 +56646,13 @@ Tilemap:
   - first: {x: 4, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
+      m_TileIndex: 5
       m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1073741824
   - first: {x: 60, y: 23, z: 0}
     second:
       serializedVersion: 2
@@ -56663,7 +56663,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  m_AnimatedTiles: {}
+  m_AnimatedTiles:
+  - first: {x: 4, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_AnimatedSprites:
+      - {fileID: 1534193657, guid: 540e38c0281ccae4ba967a3c6529cacf, type: 3}
+      - {fileID: 1763646017, guid: 540e38c0281ccae4ba967a3c6529cacf, type: 3}
+      m_AnimationSpeed: 2
+      m_AnimationTimeOffset: 0
+      m_Flags: 0
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -56673,10 +56682,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: d209c9c24d951f64e973a09f2a741cc6, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d42b1facfdebe7f47b31286475a690b3, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8e1e5bd2010d9224eb1b7c70e236d719, type: 2}
   m_TileSpriteArray:
@@ -56691,7 +56700,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 1534193657, guid: 540e38c0281ccae4ba967a3c6529cacf, type: 3}
+    m_Data: {fileID: 1763646017, guid: 540e38c0281ccae4ba967a3c6529cacf, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: bf3fc1acf258e5b49a7954da220b3f5e, type: 3}
   m_TileMatrixArray:
@@ -72755,11 +72764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222192621184399367, guid: c67343d409b0a1f429c01fb2f141eb67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9799356
+      value: 16.259356
       objectReference: {fileID: 0}
     - target: {fileID: 5222192621184399367, guid: c67343d409b0a1f429c01fb2f141eb67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.082620144
+      value: -0.29799986
       objectReference: {fileID: 0}
     - target: {fileID: 5644687377335728953, guid: c67343d409b0a1f429c01fb2f141eb67, type: 3}
       propertyPath: m_Follow
